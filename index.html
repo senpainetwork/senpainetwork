@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenpaiNetwork | Komunitas Minecraft Profesional</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="SenpaiNetwork - Komunitas Minecraft Profesional">
+    <meta name="description" content="Ayo join SenpaiNetwork dan dapatkan teman baru! Komunitas Minecraft ramah dengan server berkualitas tinggi. IP: play.senpainet.zet1.my.id:19132">
+    <meta name="keywords" content="minecraft, server minecraft, komunitas minecraft, senpainetwork, minecraft bedrock, minecraft indonesia">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://senpainetwork.com/">
+    <meta property="og:title" content="SenpaiNetwork - Komunitas Minecraft Profesional">
+    <meta property="og:description" content="Ayo join SenpaiNetwork dan dapatkan teman baru! Komunitas Minecraft ramah dengan server berkualitas tinggi.">
+    <meta property="og:image" content="https://i.ibb.co.com/DDCgrrWK/IMG-20250412-WA0041.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://senpainetwork.com/">
+    <meta property="twitter:title" content="SenpaiNetwork - Komunitas Minecraft Profesional">
+    <meta property="twitter:description" content="Ayo join SenpaiNetwork dan dapatkan teman baru! Komunitas Minecraft ramah dengan server berkualitas tinggi.">
+    <meta property="twitter:image" content="https://i.ibb.co.com/DDCgrrWK/IMG-20250412-WA0041.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co.com/DDCgrrWK/IMG-20250412-WA0041.jpg">
+    <link rel="apple-touch-icon" href="https://i.ibb.co.com/DDCgrrWK/IMG-20250412-WA0041.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://senpainetwork.com/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --light: #eff6ff;
+            --dark: #1e3a8a;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9fafb;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            padding: 0.8rem 5%;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9)), 
+                url('https://images.unsplash.com/photo-1607513746994-51f730a44832?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 80px 5% 60px; /* Menambahkan padding top untuk navbar fixed */
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive font size */
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Untuk mobile */
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: var(--white);
+    color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.server-ip-container {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.server-ip {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    max-width: 100%;
+    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.server-ip:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.server-ip span {
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+
+.copy-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 992px) {
+    .hero {
+        padding: 80px 5% 40px;
+    }
+    
+    .hero-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero p {
+        max-width: 100%;
+    }
+    
+    .btn-group {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 90vh;
+    }
+    
+    .btn-group {
+        gap: 1rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        width: 100%;
+    }
+    
+    .server-ip {
+        padding: 0.8rem 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .hero p {
+        margin-bottom: 1.5rem;
+    }
+    
+    .server-ip {
+        width: 100%;
+        justify-content: center;
+    }
+}
+        
+        /* Features Section */
+        .section {
+            padding: 6rem 5%;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .feature-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Server Stats */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #ffffff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        /* Join Section */
+        .join-section {
+            background-color: var(--light);
+            text-align: center;
+            padding: 6rem 5%;
+        }
+        
+        .join-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .join-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+        
+        .join-content p {
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            font-decoratio
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 4rem 5% 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                gap: 1.5rem;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .section {
+                padding: 4rem 5%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://i.ibb.co.com/DDCgrrWK/IMG-20250412-WA0041.jpg" alt="SenpaiNetwork Logo">
+            <span class="logo-text">SenpaiNetwork</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Beranda</a>
+            <a href="#features">Fitur</a>
+            <a href="#server">Server</a>
+            <a href="#gallery">Galeri</a>
+            <a href="#join">Bergabung</a>
+        </div>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Komunitas Minecraft Profesional</h1>
+            <p>Bergabunglah dengan ribuan pemain lainnya di server Minecraft terbaik dengan komunitas yang ramah dan berbagai fitur menarik.</p>
+            <div class="btn-group">
+                <a href="https://chat.whatsapp.com/E6hUvWjVF2PA3sNV3IRoAq" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Grup WhatsApp
+                </a>
+                <a href="#join" class="btn btn-secondary">
+                    <i class="fas fa-users"></i> Bergabung Sekarang
+                </a>
+            </div>
+            <div class="server-ip">
+                <span>play.senpainet.zet1.my.id:19132</span>
+                <button class="copy-btn" title="Salin IP">
+                    <i class="far fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="section-title">
+            <h2>Fitur Unggulan</h2>
+            <p>Nikmati pengalaman bermain Minecraft yang lebih seru dengan berbagai fitur eksklusif kami</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Keamanan Terjamin</h3>
+                <p>Sistem anti-cheat canggih dan tim admin yang selalu siap menjaga kenyamanan bermain semua pemain.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Event Rutin</h3>
+                <p>Berbagai event menarik setiap minggu seperti build competition, PvP tournament, dan banyak lagi.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Server Stabil</h3>
+                <p>Server dengan performa tinggi dan uptime 99.9% untuk pengalaman bermain tanpa lag.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Komunitas Ramah</h3>
+                <p>Komunitas aktif dengan pemain dari berbagai daerah yang siap membantu dan bermain bersama.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>Ekonomi Seimbang</h3>
+                <p>Sistem ekonomi yang adil dengan shop player dan market yang teratur.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Support 24/7</h3>
+                <p>Tim support yang selalu siap membantu kapan pun Anda membutuhkan bantuan.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="section-title">
+            <h2 style="color: var(--white);">Statistik Komunitas</h2>
+            <p style="color: rgba(255, 255, 255, 0.9);">Bergabunglah dengan ribuan pemain yang sudah merasakan pengalaman bermain di SenpaiNetwork</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">2,500+</div>
+                <div class="stat-label">Pemain Terdaftar</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Uptime Server</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Event Bulanan</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Dukungan Online</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Server Info Section -->
+    <section class="section" id="server">
+        <div class="section-title">
+            <h2>Informasi Server</h2>
+            <p>Detail teknis tentang server Minecraft kami</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <h3>Detail Server</h3>
+                <p><strong>Alamat IP:</strong> play.senpainet.zet1.my.id</p>
+                <p><strong>Port:</strong> 19132</p>
+                <p><strong>Versi:</strong> Minecraft Bedrock Terbaru</p>
+                <p><strong>Mode:</strong> Survival Multiplayer</p>
+                <p><strong>Dibuat:</strong> 2024</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-list-alt"></i>
+                </div>
+                <h3>Aturan Server</h3>
+                <ul style="list-style-type: none;">
+                    <li><i class="fas fa-check-circle" style="color: var(--success);"></i> Dilarang menggunakan cheat</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--success);"></i> Hormati semua pemain</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--success);"></i> Tidak ada griefing</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--success);"></i> Jaga bahasa yang sopan</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--success);"></i> Ikuti arahan staff</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h3>Cara Bergabung</h3>
+                <ol style="padding-left: 1.2rem;">
+                    <li>Buka Minecraft Bedrock Edition</li>
+                    <li>Pilih "Play" lalu "Servers"</li>
+                    <li>Scroll ke bawah dan pilih "Add Server"</li>
+                    <li>Masukkan detail server kami</li>
+                    <li>Selamat bermain!</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="section" id="gallery">
+        <div class="section-title">
+            <h2>Galeri Kami</h2>
+            <p>Lihat beberapa momen terbaik dari komunitas SenpaiNetwork</p>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://i.ibb.co.com/ZR5QN3Xq/IMG-20250413-WA0010.jpg" alt="Minecraft Build">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co.com/27CNnR3h/IMG-20250413-WA0009.jpg" alt="Minecraft Event">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co.com/1YLTN9R7/IMG-20250413-WA0008.jpg" alt="Minecraft PvP">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Join Section -->
+    <section class="join-section" id="join">
+        <div class="join-content">
+            <h2>Siap Bergabung?</h2>
+            <p>Bergabunglah dengan komunitas Minecraft terbaik dan mulailah petualangan seru Anda bersama ribuan pemain lainnya!</p>
+            <div class="btn-group">
+                <a href="https://chat.whatsapp.com/E6hUvWjVF2PA3sNV3IRoAq" class="btn btn-primary" style="animation: pulse 2s infinite;">
+                    <i class="fab fa-whatsapp"></i> Gabung Grup WhatsApp
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <i class="fas fa-gamepad"></i> Mainkan Sekarang
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Tentang Kami</h3>
+                <p>SenpaiNetwork adalah komunitas Minecraft profesional yang berdedikasi untuk menyediakan pengalaman bermain terbaik bagi semua pemain.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Link Cepat</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#features">Fitur</a></li>
+                    <li><a href="#server">Server</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#join">Bergabung</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kontak</h3>
+                <ul class="footer-links">
+                    <li><a href="https://chat.whatsapp.com/E6hUvWjVF2PA3sNV3IRoAq"><i class="fab fa-whatsapp"></i> Grup WhatsApp</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Email</a></li>
+                    <li><a href="#"><i class="fab fa-discord"></i> Discord</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Server Info</h3>
+                <ul class="footer-links">
+                    <li><strong>IP:</strong> play.senpainet.zet1.my.id</li>
+                    <li><strong>Port:</strong> 19132</li>
+                    <li><strong>Versi:</strong> Bedrock</li>
+                    <li><strong>Status:</strong> Online</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024-2025 SenpaiNetwork Community. Dibuat dengan ❤️ oleh FanzZelfion</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Copy IP Button
+        const copyBtn = document.querySelector('.copy-btn');
+        copyBtn.addEventListener('click', () => {
+            const ipText = 'play.senpainet.zet1.my.id:19132';
+            navigator.clipboard.writeText(ipText).then(() => {
+                const originalIcon = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+                copyBtn.style.color = '#10b981';
+                
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalIcon;
+                    copyBtn.style.color = '#ffffff';
+                }, 2000);
+            });
+        });
+        
+        // Animate on Scroll
+        const featureCards = document.querySelectorAll('.feature-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        featureCards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
